@@ -258,5 +258,9 @@ li:nth-child(2n) {
         .message {
             margin: 3% 0;
         }
+        
+        footer {
+            font-size: 50%;
+        }
 
 	}
