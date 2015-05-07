@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!--
+Jessica J. Hernandez
+ID: 0004631401
+May 8, 2015 - Week 1
+Front-end Web Frameworks | 201505-01
+Professor: Crystal Silvestro
+Full Sail University
+-->
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Grocery List Application</title>
+    <meta name="author" content="Jessica J. Hernandez">
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <!-- end CSS-->
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body ng-app="myApp">
+    <div id="container" ng-controller="GroceryController">
+
+        <h1>Grocery List</h1>
+
+        <div id="inputFieldDiv">
+            <form ng-submit="addItem()">
+                <input type="text" placeholder="Add a Grocery Item" ng-model="itemName" />
+                <input type="submit" name="addBtn" id="addBtn" value="Add Item" />
+                <div class="message">{{ msg }}</div>
+            </form>
+        </div>
+
+        <div id="list">
+            
+            <h2>Things to buy ( {{ itemsArray.length }} ):</h2>
+                <ul>
+                    <li ng-repeat="item in itemsArray"><div><span>&rarr; &nbsp;&nbsp;{{ item }}</span></div><img src="images/discard.png" class="deleteIcon" ng-click="deleteItem(item)" /></li>
+                </ul>
+        </div>
+
+    </div>
+    
+    
+    
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

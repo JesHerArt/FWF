@@ -1,0 +1,216 @@
+/*
+
+    Jessica J. Hernandez
+    ID: 0004631401
+    May 8, 2015 - Week 1
+    Front-end Web Frameworks | 201505-01
+    Professor: Crystal Silvestro
+    Full Sail University
+    
+*/
+
+/* _____________________________________ */
+/*              MAIN STYLES              */
+/* _____________________________________ */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #373834;
+    position: relative;
+}
+
+#container {
+    width: 50%;
+    margin: 40px auto;
+    background: #DE7047;
+    padding: 2% 2% 3.4%;
+    box-shadow: 0 0 40px #20211F;
+}
+
+
+
+/* _____________________________________ */
+/*           HEADINGS & TEXT             */
+/* _____________________________________ */
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 330%;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: 'Rock Salt', 'Montserrat', sans-serif;
+    margin: 0;
+    padding-left: 3%;
+    border-bottom: 2px solid #DE7047;
+    color: #528540;
+}
+
+.message {
+    font-size: 90%;
+    font-style: italic;
+    padding: 1.2% 0 1.2% 1.6%;
+}
+
+
+
+/* _____________________________________ */
+/*                IMAGES                 */
+/* _____________________________________ */
+
+img {
+	max-width: 100%;
+}
+
+.listIcon {
+    margin-right: 2%;
+}
+
+
+
+/* _____________________________________ */
+/*                 FORMS                 */
+/* _____________________________________ */
+
+#inputFieldDiv {
+    width: 80%;
+    padding: 2% 2% 0;
+    background: #FFE0A2;
+    margin: 4% auto 0 auto;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 1.4% 2%;
+    font-size: 100%;
+    border: 1px solid #528540;
+}
+
+#addBtn {
+    padding: 1.75% 0;
+    width: 22%;
+    background: #528540;
+    margin-left: 2%;
+    font-size: 80%;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+}
+
+#addBtn:hover {
+    background: #3F6631;
+}
+
+
+
+/* _____________________________________ */
+/*                 LISTS                 */
+/* _____________________________________ */
+
+#list {
+    width: 76%;
+    padding: 4%;
+    margin: 4% auto 0 auto;
+    background: #FFE0A2;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    line-height: 0;
+    font-size: 105%;
+    padding: 2.5% 0 2.5% 30px ;
+    position: relative;
+}
+
+li span {
+    height: 24px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+li div {
+    display: inline-block;
+}
+
+li:nth-child(2n) {
+    background: #ffecc7;
+}
+
+.deleteIcon {
+    position: absolute;
+    right: 0;
+    margin: 0 2%;
+}
+
+.deleteIcon:hover {
+    cursor: pointer;
+    background: url("../images/discard-bg.png");
+}
+
+
+
+/* _____________________________________ */
+/*             MEDIA QUERIES             */
+/* _____________________________________ */
+
+/* Tablets (portrait) Mainly iPad */
+@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 899px)
+	and (orientation: portrait),
+	(min-width : 768px)
+	and (max-width : 899px) {
+	   
+        #container {
+            width: 70%;
+        }
+
+	}
+	
+	
+	
+/* Smartphones (portrait & landscape) Mainly iPhone 4 - 6 */
+@media only screen
+	and (max-device-width: 767px),
+	(max-width : 767px) {
+	   
+        #container {
+            width: 90%;
+        }
+        
+	}
+	
+	
+	
+/* Smartphones (portrait or landscape) Mainly iPhone 4 - 6 */
+@media only screen
+	and (max-device-width: 485px),
+	(max-width : 485px) {
+	   
+        #container {
+            width: 92%;
+            margin: 2% auto;
+            padding: 20px 2.5%;
+        }
+        
+        #list {
+            width: 90%;
+        }
+        
+        #inputFieldDiv {
+            width: 94%;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+	}
