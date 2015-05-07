@@ -24,7 +24,6 @@ Full Sail University
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css?v=1">
-    <!-- end CSS-->
 
     <!--Favicon-->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -36,10 +35,14 @@ Full Sail University
 </head>
 
 <body ng-app="myApp">
+    
+    <!--START OF THE MAIN CONTENT CONTAINER-->
+    <!--CONTROLLER SPECIFIED-->
     <div id="container" ng-controller="GroceryController">
 
         <h1><a href="index.html">Grocery List</a></h1>
-
+        
+        <!--INPUT FIELD SECTION-->
         <div id="inputFieldDiv">
             <form ng-submit="addItem()">
                 <input type="text" placeholder="Add a Grocery Item" ng-model="itemName" />
@@ -47,24 +50,29 @@ Full Sail University
                 <div class="message">{{ msg }}</div>
             </form>
         </div>
+        <!--END OF THE INPUT FIELD SECTION-->
 
+        <!--LIST ITEMS SECTION-->
         <div id="list">
             
             <h2>Things to buy ( {{ itemsArray.length }} ):</h2>
                 <ul>
+                    <!--REPEATING LIST ITEMS USING ANGULARJS-->
                     <li ng-repeat="item in itemsArray"><div><span>&rarr; &nbsp;&nbsp;{{ item }}</span></div><img src="images/discard.png" class="deleteIcon" ng-click="deleteItem(item)" /></li>
                 </ul>
         </div>
+        <!--END OF THE LIST ITEMS SECTION-->
         
     </div>
+    <!--END OF THE MAIN CONTENT CONTAINER-->
     
+    <!--START OF FOOTER TEXT-->
     <footer><p>&copy; 2015 Jessica J. Hernandez - Student at Full Sail University<br>
         Front-end Web Frameworks Course | WDD372-O 201505-01<br>
         Week 1 Assignment - Grocery List AngularJS Application</p></footer>
     
     
     <!-- JAVASCRIPT FILES -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
