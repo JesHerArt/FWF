@@ -22,7 +22,7 @@ body {
 
 #container {
     width: 50%;
-    margin: 40px auto;
+    margin: 40px auto 20px auto;
     background: #DE7047;
     padding: 2% 2% 3.4%;
     box-shadow: 0 0 40px #20211F;
@@ -53,6 +53,21 @@ h2 {
     font-size: 90%;
     font-style: italic;
     padding: 1.2% 0 1.2% 1.6%;
+}
+
+footer {
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    color: #dbdbdb;
+    font-size: 60%;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
+    color: #fff;
+    text-decoration: none;
 }
 
 
@@ -169,7 +184,7 @@ li:nth-child(2n) {
 	(min-width : 768px)
 	and (max-width : 899px) {
 	   
-        #container {
+        #container, footer {
             width: 70%;
         }
 
@@ -182,7 +197,7 @@ li:nth-child(2n) {
 	and (max-device-width: 767px),
 	(max-width : 767px) {
 	   
-        #container {
+        #container, footer {
             width: 90%;
         }
         
@@ -201,16 +216,47 @@ li:nth-child(2n) {
             padding: 20px 2.5%;
         }
         
+        footer {
+            width: 92%;
+        }
+        
         #list {
             width: 90%;
         }
         
         #inputFieldDiv {
-            width: 94%;
+            width: 90%;
+            padding: 4% 4% 0;
+            overflow: auto;
         }
         
         h1 {
             margin-bottom: 20px;
         }
         
+	}
+
+
+
+/* Smartphones (portrait) Mainly iPhone 4 - 6 */
+@media only screen 
+	and (max-device-width: 414px)
+	and (orientation: portrait),
+	(max-width: 414px) {
+
+        input[type="text"] {
+            width: 95.5%;
+            padding: 2.3% 2%;
+        }
+
+        #addBtn {
+            width: 100%;
+            margin: 4% 0 0;
+            padding: 3% 0;
+        }
+        
+        .message {
+            margin: 3% 0;
+        }
+
 	}
