@@ -64,7 +64,7 @@ Full Sail University
                     <input type="text" placeholder="Phone: (000) 000-0000" ng-model="empPhone" />
                     <input type="email" placeholder="Email Address" ng-model="empEmail" />
 
-                    <input type="button" name="resetBtn" id="resetBtn" value="Reset" ng-click="" />              
+                    <input type="button" name="resetBtn" id="resetBtn" value="Reset" ng-click="resetForm()" />              
                     <input type="submit" name="addBtn" id="addBtn" value="Add Employee" ng-click="addEmployee()" />
                 </form>
             </div>
@@ -76,7 +76,7 @@ Full Sail University
         <div id="directoryList">
         
             <!--DIV TO REPEAT WITH EMPLOYEE OBJECTS-->
-            <div class="emp" ng-repeat="emp in employeeArray">
+            <div class="emp" ng-repeat="emp in employeeArray track by $id($index)">
                 <div class="name-title">
                     <img src="images/discard.png" class="deleteIcon" ng-click="deleteEmployee(emp)" title="Delete Employee" alt="Delete Employee Icon" />
                     <h3>{{ emp.name }}</h3>

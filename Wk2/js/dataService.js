@@ -58,13 +58,14 @@ angular.module('myApp').service("dataService", function() {
     
     /*RETURNS THE ARRAY OF EMPLOYEES*/
     this.getEmployees = function() {
+        var str = localStorage.getItem("EmployeesDirectList");
+        employeesArray = JSON.parse(str)  || employeesArray;
         return employeesArray;
     }
     
     
     /*ADDS A NEW EMPLOYEE TO THE EMPLOYEES ARRAY*/
     this.newEmployee = function(name, title, addy, city, st, zip, ph, email) {
-        
         var newEmployee = {
             name:       name,
             position:   title,
@@ -77,13 +78,16 @@ angular.module('myApp').service("dataService", function() {
         };
 
         employeesArray.push(newEmployee);
-        
+        var str = JSON.stringify(employeesArray);
+        localStorage.setItem("EmployeesDirectList", str);
     }
     
     
     /*DELETES AN EMPLOYEE FROM THE EMPLOYEES ARRAY*/
     this.removeEmployee = function(employee) {
         employeesArray.splice(employeesArray.indexOf(employee), 1);
+        var str = JSON.stringify(employeesArray);
+        localStorage.setItem("EmployeesDirectList", str);
     }
 
 });

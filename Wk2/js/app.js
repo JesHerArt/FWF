@@ -49,5 +49,19 @@ angular.module('myApp', []).controller('EmployeeController', function($scope,dat
         dataService.removeEmployee(employeeToDelete);
     }
     
+    
+    
+    /*RESET ADD EMPLOYEE FORM*/
+    $scope.resetForm = function() {
+        $scope.empName = '';
+        $scope.empPosition = '';
+        $scope.empStAddress = '';
+        $scope.empCity = '';
+        $scope.empState = '';
+        $scope.empZip = '';
+        $scope.empPhone = '';
+        $scope.empEmail = ''; 
+    }
+    
 });
 /*END OF APP CONTROLLER*/
