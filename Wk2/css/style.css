@@ -24,11 +24,13 @@ body {
 #container {
     width: 94%;
     padding: 0 3%;
+    overflow: auto;
 }
 
 .clear {
     clear: both;
 }
+
 
 #entryForm, #directoryList {
     float: left;
@@ -310,6 +312,8 @@ input[type="text"], input[type="email"] {
         
         .emp {
             width: 100%;
+            margin-right: 0;
+            margin-left: 0;
         }
         
     }
