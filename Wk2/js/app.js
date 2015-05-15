@@ -9,11 +9,8 @@
     
 */
 
-/*MAIN APP CALL*/
-var app = angular.module('myApp', []);
-
-/*SPECIFYING THE APP CONTROLLER*/
-app.controller('EmployeeController', function($scope){
+/*MAIN APP CALL*/           /*SPECIFYING THE APP CONTROLLER*/
+angular.module('myApp', []).controller('EmployeeController', function($scope,dataService){
 
     $scope.empName;
     $scope.empPosition;
@@ -25,67 +22,15 @@ app.controller('EmployeeController', function($scope){
     $scope.empEmail;
     
     
-    /*DEFAULT EMPLOYEES LIST*/
-    $scope.employeesArray = [
-            {
-                name: "Garry Jones",
-                position: "Full Sail President",
-                phone: "1 (800) 226-7625",
-                email: "garry@fullsail.com",
-                address: "3300 University Boulevard",
-                city: "Winter Park",
-                state: "FL",
-                zip: "32792"
-            },
-            {
-                name: "Crystal Silvestro",
-                position: "Professor at Full Sail University",
-                phone: "(407) 679-0100",
-                email: "csilvestro@fullsail.com",
-                address: "3300 University Boulevard",
-                city: "Winter Park",
-                state: "FL",
-                zip: "32792"
-            },
-            {
-                name: "Jessica Hernandez",
-                position: "Student",
-                phone: "(786) 567-7223",
-                email: "jesherart@fullsail.edu",
-                address: "12345 South Road",
-                city: "Miami",
-                state: "FL",
-                zip: "33133"
-            },
-            {
-                name: "Asuka Kazama",
-                position: "Professional Fighter",
-                phone: "(407) 679-0100",
-                email: "asuka@tekken.com",
-                address: "4345 Sushi Park Way",
-                city: "Tokyo",
-                state: "JP",
-                zip: ""
-            }
-        ]
+    /*GET EMPLOYESS ARRAY BY CALLING DATASERVICE*/
+    $scope.employeeArray = dataService.getEmployees();
+    
+    console.log($scope.employeeArray);
     
     
-    
-    /*ADD EMPLOYEE FUNCTION*/
+    /*ADD EMPLOYEE FUNCTION BY CALLING DATASERVICE*/
     $scope.addEmployee = function() {
-        
-        var newEmployee = {
-            name: $scope.empName,
-            position: $scope.empPosition,
-            phone: $scope.empPhone,
-            email: $scope.empEmail,
-            addy: $scope.empStAddress,
-            city: $scope.empCity,
-            state: $scope.empState,
-            zip: $scope.empZip 
-        };
-        
-        $scope.employeesArray.push(newEmployee);
+        dataService.newEmployee($scope.empName, $scope.empPosition, $scope.empStAddress, $scope.empCity, $scope.empState, $scope.empZip, $scope.empPhone, $scope.empEmail);
         
         $scope.empName = '';
         $scope.empPosition = '';
@@ -95,16 +40,13 @@ app.controller('EmployeeController', function($scope){
         $scope.empZip = '';
         $scope.empPhone = '';
         $scope.empEmail = '';
-            
     }
 
     
     
-    /*DELETE EMPLOYEE FUNCTION*/
-    $scope.deleteEmployee = function(empToDelete) {
-        var index = $scope.employeesArray.indexOf(empToDelete);
-
-        $scope.employeesArray.splice(index, 1);
+    /*DELETE EMPLOYEE FUNCTION BY CALLING DATASERVICE*/
+    $scope.deleteEmployee = function(employeeToDelete) {
+        dataService.removeEmployee(employeeToDelete);
     }
     
 });
