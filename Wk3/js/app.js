@@ -17,13 +17,13 @@ angular.module('myApp', ['ngRoute'])
     
         $routeProvider.when('/view1',{
             templateUrl :   "view1.html",
-            controller  :   "HomeworkController"
-        }).when('/view2/:gameParam',{
+            controller  :   "BillsController"
+        }).when('/view2',{
             templateUrl :   "view2.html",
-            controller  :   "GamesController"
-        }).when('/view3',{
+            controller  :   "HomeworkController"
+        }).when('/view3/:gameParam',{
             templateUrl :   "view3.html",
-            controller  :   "BillsController"  
+            controller  :   "GamesController"  
         }).otherwise({
             redirectTo  :   "/view1" 
         });

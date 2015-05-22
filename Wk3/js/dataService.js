@@ -14,9 +14,24 @@ angular.module('myApp').service("dataService", function() {
     /*DEFAULT HOMEWORKS LIST*/
     var homeworksArray = [
             {
-                course: "FWF",
-                asgName: "Week 3",
-                dueDate: "May 22, 2015"
+                course: "Information Retrieval",
+                asgName: "Homework 2",
+                dueDate: "2015-05-27"
+            },
+            {
+                course: "Front-End Web Frameworks",
+                asgName: "Week 3 Lists Application",
+                dueDate: "2015-05-22"
+            },
+            {
+                course: "Information Retrieval",
+                asgName: "Homework 4",
+                dueDate: "2015-06-15"
+            },
+            {
+                course: "Information Retrieval",
+                asgName: "Homework 3",
+                dueDate: "2015-06-08"
             }
         ];
     
@@ -52,7 +67,7 @@ angular.module('myApp').service("dataService", function() {
     
     
     /*DEFAULT GAMES LIST*/
-    var gamesArray = ["legend of zelda","lego movie","fantasy life","monster hunter"];
+    var gamesArray = ["Fantasy Life", "Legend of Zelda: A Link Between Worlds", "Skylanders: Swap Force", "Monster Hunter 4"];
     
     
     /*RETURNS THE ARRAY OF HOMEWORKS*/
@@ -85,23 +100,23 @@ angular.module('myApp').service("dataService", function() {
     var billsArray = [
             {
                 name: "Nissan",
-                ammount: "304.07",
-                dueDate: "June 1, 2015"
+                ammount: "304.00",
+                dueDate: "2015-06-07"
             },
             {
-                name: "Nissan",
-                ammount: "304.07",
-                dueDate: "June 1, 2015"
+                name: "Macy's",
+                ammount: "25.00",
+                dueDate: "2015-05-30"
             },
             {
-                name: "Nissan",
-                ammount: "304.07",
-                dueDate: "June 1, 2015"
+                name: "Best Buy",
+                ammount: "10.00",
+                dueDate: "2015-06-23"
             },
             {
-                name: "Nissan",
-                ammount: "304.07",
-                dueDate: "June 1, 2015"
+                name: "Citi Bank",
+                ammount: "75.00",
+                dueDate: "2015-06-10"
             }
         ];
     

@@ -16,8 +16,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    /*background: #373834;*/
-    background: #2D2D2F;
+    background: #212B40;
     position: relative;
 }
 
@@ -27,56 +26,70 @@ body {
     overflow: auto;
 }
 
+#mainContent {
+    width: 100%;
+    margin: 0, auto;
+}
+
+.formSection, .listSection {
+    padding: 2.5%;
+    float: left;
+    margin-bottom: 3%;
+    overflow: auto;
+}
+
+.formSection {
+    width: 38%;
+    margin-right: 2%;
+    background: #547B97;
+}
+
+.listSection {
+    width: 50%;
+    background: #BADCDD;
+}
+
+#outBox {
+    width: 43%;
+    margin-right: 2%;
+    float: left;
+    margin-bottom: 3%;
+    overflow: auto;
+}
+
+#gameFormSection {
+    width: 88.4%;
+    padding: 5.8%;
+    background: #547B97;
+    margin-bottom: 5%;
+}
+
+#paramBox {
+    width: 94%;
+    padding: 3%;
+    background: #547B97;
+    text-align: center;
+}
+
 .clear {
     clear: both;
 }
 
 
-#entryForm, #directoryList {
-    float: left;
+
+/* _____________________________________ */
+/*               NAVIGATION              */
+/* _____________________________________ */
+
+nav {
+    margin: 7% 0 3% 0;
+    text-align: center;
 }
 
-#entryForm {
-    width: 37%;
-    padding: 1%;
-    background: #C2E5D4;
-    margin: 0 2% 3% 0;
+.navBtn {
+    padding: 1.1% 6%;
 }
 
-#formSection {
-    padding: 2% 4% 3%;
-    overflow: auto;
-}
-
-#directoryList {
-    width: 59%;
-}
-
-.emp {
-    width: 47%;
-    margin: 0 1.5% 3%;
-    float: left;
-}
-
-.name-title {
-    background: #FF5B5B;
-    padding: 2.5% 0 2.5% 5%;
-    position: relative;
-    color: #fff;
-    
-    -webkit-border-top-left-radius: 15px;
-    -webkit-border-top-right-radius: 15px;
-    -moz-border-radius-topleft: 15px;
-    -moz-border-radius-topright: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.info {
-    padding: 3% 10%;
-    font-size: 90%;
-    background: #FFE9C7;
-}
 
 
 
@@ -85,33 +98,46 @@ body {
 /* _____________________________________ */
 
 h1 {
-    color: #fff;
-    font-size: 330%;
-    margin: 3% 0;
-    padding: 0 0 3px 20px;
-    border-bottom: 1px solid #fff;
+    color: #FC4349;
+    padding: 0.4% 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1C2436;
+    width: 96%;
+    margin: 0;
+    font-size: 160%;
+    text-align: center;
+}
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
+    color: #FC4349;
+    text-decoration: none;
 }
 
 h2 {
-    margin-top: 1%;
-    text-align: center;
-    color: #319CC7;
-    font-size: 180%;
+    margin: 0;
+    color: #C2E078;
+    font-size: 250%;
     text-transform: uppercase;
     padding-bottom: 10px;
-    border-bottom: 2px dotted #023B47;
 }
 
 h3 {
-    margin: 0;
+    margin-top: 0;
 }
 
 h4 {
-    margin: 0;
-    font-style: italic;
-    font-weight: normal;
-    padding-top: 0.5%;
-    font-size: 85%;
+    font-size: 150%;
+    margin: 2% 0;
+    color: #FFFEF1;
+}
+
+#paramWord {
+    font-size: 230%;
+    font-weight: 700;
+    margin: 2% 0;
+    color: #FCFCD0;
 }
 
 footer {
@@ -122,25 +148,13 @@ footer {
     font-size: 60%;
     line-height: 150%;
     letter-spacing: 1px;
-}
-
-h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
-    color: #FF8598;
-    text-decoration: none;
-}
-
-.info > p {
-    margin-top: 0;
-}
-
-.info p:last-child {
-    margin-bottom: 0;
+    clear: both;
 }
 
 
 
 /* _____________________________________ */
-/*                 LISTS                 */
+/*            LISTS & TABLES             */
 /* _____________________________________ */
 
 #list {
@@ -177,6 +191,27 @@ li:nth-child(2n) {
     background: #ffecc7;
 }
 
+table {
+    width: 100%;
+}
+
+th, td {
+    width: 25%;
+    text-align: center;
+}
+
+th {
+    padding: 1%;   
+}
+
+td {
+    padding: 2% 1%;
+}
+
+tr:nth-child(2n -1) {
+    background: white;   
+}
+
 
 
 /* _____________________________________ */
@@ -188,8 +223,8 @@ img {
 }
 
 .deleteIcon {
-    position: absolute;
-    right: 0;
+    /*position: absolute;
+    right: 0; */
     margin: 0 3%;
 }
 
@@ -209,24 +244,9 @@ input[type="text"], input[type="email"] {
     width: 95.6%;
     padding: 2% 2%;
     font-size: 100%;
-    border: 1px solid #595241;
+    border: 1px solid #0C273D;
     margin: 0 0 4% 0;
 }
-
-#cityInput {
-    width: 43%;
-}
-
-#stateInput {
-    width: 15%;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-}
-
-#zipInput {
-    width: 23.5%;
-}
-
 
 .btn {
     padding: 3% 4%;
@@ -250,18 +270,6 @@ input[type="text"], input[type="email"] {
 @media only screen
     and (max-width : 1330px) {
      
-        #stateInput {
-            margin-left: 0.6%;
-            margin-right: 0.6%;
-        }
-        
-        h2 {
-            font-size: 150%;
-        }
-        
-        h3 {
-            font-size: 100%;
-        }
         
     }
 
@@ -274,22 +282,6 @@ input[type="text"], input[type="email"] {
 	(min-width : 768px)
 	and (max-width : 899px) {
         
-        h2 {
-            font-size: 130%;
-        }
-        
-        .emp {
-            width: 100%;
-        }
-        
-        #cityInput, #stateInput, #zipInput {
-            width: 95.6%;
-        }
-
-        #stateInput {
-            margin-left: 0;
-            margin-right: 0;
-        }
 
 	}
 	
@@ -300,46 +292,6 @@ input[type="text"], input[type="email"] {
 	and (max-device-width: 767px),
 	(max-width : 767px) {
         
-        #entryForm, #directoryList {
-            float: none;
-            width: 100%;
-        }
-        
-        #entryForm {
-            margin-top: 30px;
-        }
-	   
-        .emp {
-            width: 47%;
-            margin: 0 1.5% 3%;
-            float: left;
-        }
-        
-        #cityInput {
-            width: 43%;
-        }
-
-        #stateInput {
-            width: 15%;
-            margin-left: 1.5%;
-            margin-right: 1.5%;
-        }
-
-        #zipInput {
-            width: 23.5%;
-        }
-        
-        input[type="text"], input[type="email"] {
-            margin: 0 0 1% 0;
-        }
-        
-        #addBtn, #resetBtn {
-            margin-top: 1%;
-        }
-        
-        h1 {
-            font-size: 250%;
-        }
         
 	}
 
@@ -348,11 +300,6 @@ input[type="text"], input[type="email"] {
 	and (max-device-width: 580px),
 	(max-width : 580px) {
         
-        .emp {
-            width: 100%;
-            margin-right: 0;
-            margin-left: 0;
-        }
         
     }
 	
@@ -362,24 +309,6 @@ input[type="text"], input[type="email"] {
 @media only screen
 	and (max-device-width: 500px),
 	(max-width : 500px) {
-	   
-        #cityInput, #stateInput, #zipInput {
-            width: 95.6%;
-        }
-
-        #stateInput {
-            margin-left: 0;
-            margin-right: 0;
-        }
-        
-        h1 {
-            font-size: 200%;
-            text-align: center;
-        }
-        
-        input[type="text"], input[type="email"] {
-            margin: 0 0 2% 0;
-        }
             
         
 	}
@@ -392,8 +321,5 @@ input[type="text"], input[type="email"] {
 	and (orientation: portrait),
 	(max-width: 414px) {
         
-        footer {
-            font-size: 50%;
-        }
 
 	}
