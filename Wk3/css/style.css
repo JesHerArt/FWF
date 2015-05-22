@@ -1,0 +1,399 @@
+/*
+
+    Jessica J. Hernandez
+    ID: 0004631401
+    May 22, 2015 - Week 3
+    Front-end Web Frameworks | 201505-01
+    Professor: Crystal Silvestro
+    Full Sail University
+    
+*/
+
+/* _____________________________________ */
+/*              MAIN STYLES              */
+/* _____________________________________ */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    /*background: #373834;*/
+    background: #2D2D2F;
+    position: relative;
+}
+
+#container {
+    width: 94%;
+    padding: 0 3%;
+    overflow: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+
+#entryForm, #directoryList {
+    float: left;
+}
+
+#entryForm {
+    width: 37%;
+    padding: 1%;
+    background: #C2E5D4;
+    margin: 0 2% 3% 0;
+}
+
+#formSection {
+    padding: 2% 4% 3%;
+    overflow: auto;
+}
+
+#directoryList {
+    width: 59%;
+}
+
+.emp {
+    width: 47%;
+    margin: 0 1.5% 3%;
+    float: left;
+}
+
+.name-title {
+    background: #FF5B5B;
+    padding: 2.5% 0 2.5% 5%;
+    position: relative;
+    color: #fff;
+    
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.info {
+    padding: 3% 10%;
+    font-size: 90%;
+    background: #FFE9C7;
+}
+
+
+
+/* _____________________________________ */
+/*           HEADINGS & TEXT             */
+/* _____________________________________ */
+
+h1 {
+    color: #fff;
+    font-size: 330%;
+    margin: 3% 0;
+    padding: 0 0 3px 20px;
+    border-bottom: 1px solid #fff;
+}
+
+h2 {
+    margin-top: 1%;
+    text-align: center;
+    color: #319CC7;
+    font-size: 180%;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #023B47;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+    font-style: italic;
+    font-weight: normal;
+    padding-top: 0.5%;
+    font-size: 85%;
+}
+
+footer {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    color: #dbdbdb;
+    font-size: 60%;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
+    color: #FF8598;
+    text-decoration: none;
+}
+
+.info > p {
+    margin-top: 0;
+}
+
+.info p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* _____________________________________ */
+/*                 LISTS                 */
+/* _____________________________________ */
+
+#list {
+    width: 76%;
+    padding: 4%;
+    margin: 4% auto 0 auto;
+    background: #FFE0A2;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    line-height: 0;
+    font-size: 105%;
+    padding: 2.5% 0 2.5% 30px ;
+    position: relative;
+}
+
+li span {
+    height: 24px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+li div {
+    display: inline-block;
+}
+
+li:nth-child(2n) {
+    background: #ffecc7;
+}
+
+
+
+/* _____________________________________ */
+/*                IMAGES                 */
+/* _____________________________________ */
+
+img {
+	max-width: 100%;
+}
+
+.deleteIcon {
+    position: absolute;
+    right: 0;
+    margin: 0 3%;
+}
+
+.deleteIcon:hover {
+    cursor: pointer;
+    background: url("../images/discard-bg.png");
+}
+
+
+
+
+/* _____________________________________ */
+/*                 FORMS                 */
+/* _____________________________________ */
+
+input[type="text"], input[type="email"] {
+    width: 95.6%;
+    padding: 2% 2%;
+    font-size: 100%;
+    border: 1px solid #595241;
+    margin: 0 0 4% 0;
+}
+
+#cityInput {
+    width: 43%;
+}
+
+#stateInput {
+    width: 15%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+#zipInput {
+    width: 23.5%;
+}
+
+
+.btn {
+    padding: 3% 4%;
+    background: #295E52;
+    font-size: 80%;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #1C4038;
+}
+
+
+
+/* _____________________________________ */
+/*             MEDIA QUERIES             */
+/* _____________________________________ */
+
+@media only screen
+    and (max-width : 1330px) {
+     
+        #stateInput {
+            margin-left: 0.6%;
+            margin-right: 0.6%;
+        }
+        
+        h2 {
+            font-size: 150%;
+        }
+        
+        h3 {
+            font-size: 100%;
+        }
+        
+    }
+
+
+/* Tablets (portrait) Mainly iPad */
+@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 899px)
+	and (orientation: portrait),
+	(min-width : 768px)
+	and (max-width : 899px) {
+        
+        h2 {
+            font-size: 130%;
+        }
+        
+        .emp {
+            width: 100%;
+        }
+        
+        #cityInput, #stateInput, #zipInput {
+            width: 95.6%;
+        }
+
+        #stateInput {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+	}
+	
+	
+	
+/* Smartphones (portrait & landscape) Mainly iPhone 4 - 6 */
+@media only screen
+	and (max-device-width: 767px),
+	(max-width : 767px) {
+        
+        #entryForm, #directoryList {
+            float: none;
+            width: 100%;
+        }
+        
+        #entryForm {
+            margin-top: 30px;
+        }
+	   
+        .emp {
+            width: 47%;
+            margin: 0 1.5% 3%;
+            float: left;
+        }
+        
+        #cityInput {
+            width: 43%;
+        }
+
+        #stateInput {
+            width: 15%;
+            margin-left: 1.5%;
+            margin-right: 1.5%;
+        }
+
+        #zipInput {
+            width: 23.5%;
+        }
+        
+        input[type="text"], input[type="email"] {
+            margin: 0 0 1% 0;
+        }
+        
+        #addBtn, #resetBtn {
+            margin-top: 1%;
+        }
+        
+        h1 {
+            font-size: 250%;
+        }
+        
+	}
+
+
+@media only screen
+	and (max-device-width: 580px),
+	(max-width : 580px) {
+        
+        .emp {
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        
+    }
+	
+	
+	
+/* Smartphones (portrait or landscape) */
+@media only screen
+	and (max-device-width: 500px),
+	(max-width : 500px) {
+	   
+        #cityInput, #stateInput, #zipInput {
+            width: 95.6%;
+        }
+
+        #stateInput {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        h1 {
+            font-size: 200%;
+            text-align: center;
+        }
+        
+        input[type="text"], input[type="email"] {
+            margin: 0 0 2% 0;
+        }
+            
+        
+	}
+
+
+
+/* Smartphones (portrait) */
+@media only screen 
+	and (max-device-width: 414px)
+	and (orientation: portrait),
+	(max-width: 414px) {
+        
+        footer {
+            font-size: 50%;
+        }
+
+	}

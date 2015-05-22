@@ -1,0 +1,23 @@
+<div id="mainContent" ng-controller="GamesController">
+    
+    <h2>Games To Play</h2>
+    <h3>When I Have Time In Between Homework Assignments</h3>
+    
+    <form>
+        <input type="text" placeholder="Add a Video Game" ng-model="videoGame" />
+        <input type="submit" class="btn" value="Add Game" ng-click="addGame()" />
+        <div class="message">{{ msg }}</div>
+    </form>
+    
+    <h4>Games ( {{ gameArray.length }} ):</h4>
+    
+    <ul>
+        <!--REPEATING LIST ITEMS USING ANGULARJS-->
+        <li ng-repeat="game in gameArray track by $id($index)"><div><span>&rarr; &nbsp;&nbsp;{{ game }}</span></div><img src="images/discard.png" class="deleteIcon" ng-click="deleteGame(game)" title="Delete Game" alt="Delete Game Icon" /></li>
+    </ul>
+    
+    <div>
+        <p>Your mystery route param of the day is: {{ word }}</p>
+    </div>
+    
+</div>
