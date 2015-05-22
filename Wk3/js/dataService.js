@@ -71,6 +71,11 @@ angular.module('myApp').service("dataService", function() {
     }
     
     
+    
+/* ---------------------------------------------------------------------------------------- */
+    
+    
+    
     /*DEFAULT GAMES LIST*/
     var gamesArray = ["Fantasy Life", "Legend of Zelda: A Link Between Worlds", "Skylanders: Swap Force", "Monster Hunter 4"];
     
@@ -95,10 +100,15 @@ angular.module('myApp').service("dataService", function() {
     
     /*DELETES A HOMEWORK FROM THE HOMEWORKS ARRAY*/
     this.removeGame = function(game) {
-        gamesArray.splice(homeworksArray.indexOf(game), 1);
+        gamesArray.splice(gamesArray.indexOf(game), 1);
         var str = JSON.stringify(gamesArray);
         localStorage.setItem("GamesList", str);
     }
+    
+    
+    
+/* ---------------------------------------------------------------------------------------- */
+
     
     
         /*DEFAULT BILLS LIST*/

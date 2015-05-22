@@ -106,7 +106,7 @@ angular.module('myApp', ['ngRoute'])
 
 
         /*ADD BILLS FUNCTION BY CALLING DATASERVICE*/
-        $scope.addBiller = function() {
+        $scope.addBill = function() {
             dataService.newBill($scope.billerName, $scope.billAmmount, $scope.billDueDate);
             
             $scope.billerName = '';
