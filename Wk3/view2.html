@@ -1,0 +1,31 @@
+<div id="mainContent" ng-controller="HomeworkController">
+    
+    <h2>Homework To Complete</h2>
+    <div class="formSection">
+        <form>
+            <input type="text" placeholder="Course" ng-model="hwCourse" />
+            <input type="text" placeholder="Assignment Name" ng-model="hwName" />
+            <input type="text" placeholder="Due Date" ng-model="hwDueDate" />
+            <input type="submit" class="btn" value="Add Homework" ng-click="addHomework()" />
+            <input type="button" class="btn" value="Reset" ng-click="resetForm()" />
+        </form>
+    </div>
+    
+    <div class="listSection">
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Assignment Name</th>
+                <th>Due Date</th>
+                <th>Mark Complete</th>
+            </tr>
+            <tr ng-repeat="hw in homeworkArray | orderBy:'dueDate' track by $id($index)">
+                <td>{{ hw.course }}</td>
+                <td>{{ hw.asgName }}</td>
+                <td>{{ hw.dueDate }}</td>
+                <td><img src="images/discard.png" class="deleteIcon" ng-click="deleteHomework(hw)" title="Delete Homework Assignment" alt="Delete Homework Assignment Icon" /></td>
+            </tr>
+        </table>
+    </div>
+    
+</div>

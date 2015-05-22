@@ -20,7 +20,7 @@ angular.module('myApp').service("dataService", function() {
             },
             {
                 course: "Front-End Web Frameworks",
-                asgName: "Week 3 Lists Application",
+                asgName: "Lists Application",
                 dueDate: "2015-05-22"
             },
             {
@@ -32,6 +32,11 @@ angular.module('myApp').service("dataService", function() {
                 course: "Information Retrieval",
                 asgName: "Homework 3",
                 dueDate: "2015-06-08"
+            },
+            {
+                course: "Front-End Web Frameworks",
+                asgName: "Research Project",
+                dueDate: "2015-05-30"
             }
         ];
     
