@@ -1,3 +1,0 @@
-#CODETutorial.IO MEAN seed
-
-
