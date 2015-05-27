@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #222;
+    font-family: 'Hind', sans-serif;
 }
 
 h1 {
@@ -11,7 +12,6 @@ h1 {
     text-transform: uppercase;
     margin: 40px 0;
     font-size: 300%;
-    font-family: 'Hind', sans-serif;
 }
 
 .photosSection, .heading {
@@ -23,3 +23,19 @@ h1 {
     margin-bottom: 45px;
 }
 
+#information {
+    width: 70%;
+    margin: 130px auto;
+    color: #fff;
+    text-align: center;
+}
+
+#information img {
+    margin-bottom: 50px;
+    padding: 5%;
+    background: #666;
+}
+
+#information p {
+    font-size: 150%;
+}

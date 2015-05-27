@@ -45,7 +45,7 @@ var PhotoList = React.createClass({
   	},
   	componentDidMount: function() {
     	this.loadInstagram();
-    	setInterval(this.loadInstagram, 20000
+    	setInterval(this.loadInstagram, 3000
     	);
   	},
  
