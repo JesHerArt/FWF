@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+}
+
+h1 {
+    color: #EBE37E;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 40px 0;
+    font-size: 300%;
+    font-family: 'Hind', sans-serif;
+}
+
+.photosSection, .heading {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.thumbnail {
+    margin-bottom: 45px;
+}
+

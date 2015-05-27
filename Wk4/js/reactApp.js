@@ -2,11 +2,11 @@
  
  
 var Title  = React.createClass({
-	render: function() {
-		return (
+    render: function() {
+        return (
 			<div className="title">
-	 			<h1>{this.props.text}</h1>
-                        </div>
+	 		    <h1>{this.props.text}</h1>
+            </div>
  		);
 	}
 });
@@ -18,8 +18,8 @@ var Photo  = React.createClass({
 			<div className="col-xs-6 col-sm-4 col-md-4 col-lg-3">
 	 			<div className="thumbnail">
 					<img className="img-responsive" src={this.props.img}/>
-	                        </div>
-                        </div>
+	           </div>
+            </div>
  		);
 	}
 });
@@ -29,8 +29,6 @@ var Photo  = React.createClass({
 var PhotoList = React.createClass({
 	loadInstagram: function() {
 	    $.ajax({
-			//url: "https://api.instagram.com/v1/media/popular?client_id=07ac1694767e4bf7b16e6e4f81576798",
-            //url: "https://api.instagram.com/v1/users/wdd_student/media/recent/?client_id=1fc8cc2e1ead4e54b31bc747aa7509de",
             url: "https://api.instagram.com/v1/tags/wddstudent/media/recent?client_id=1fc8cc2e1ead4e54b31bc747aa7509de",
 			dataType: 'jsonp',
 			success: function(data) {
@@ -47,7 +45,7 @@ var PhotoList = React.createClass({
   	},
   	componentDidMount: function() {
     	this.loadInstagram();
-    	setInterval(this.loadInstagram, 3000
+    	setInterval(this.loadInstagram, 20000
     	);
   	},
  
@@ -59,13 +57,13 @@ var PhotoList = React.createClass({
 		});
 	return(
 		<div>
-		<div className="row">
-			<div className="col-md-12">
-				<Title text="Instagram photo Viewer" />
-			</div>
-		</div>
-		<div className="row"> 
-			{photoList}
+            <div className="row heading">
+                 <div className="col-md-12">
+                     <Title text="Instagram photo Viewer" />
+			     </div>
+		    </div>
+		    <div className="row photosSection"> 
+			     {photoList}
 		</div>
 		</div>
 		);
