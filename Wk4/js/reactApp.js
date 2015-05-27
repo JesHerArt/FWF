@@ -1,6 +1,12 @@
-/** @jsx React.DOM */
- 
- 
+/*
+        Jessica J. Hernandez
+        ID: 0004631401
+        May 27, 2015 - Week 4
+        Front-end Web Frameworks | 201505-01
+        Professor: Crystal Silvestro
+        Full Sail University
+*/
+
 var Title  = React.createClass({
     render: function() {
         return (
