@@ -103,6 +103,10 @@ nav {
     outline: none;
 }
 
+a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
+}
+
 
 
 /* _____________________________________ */
