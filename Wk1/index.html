@@ -44,9 +44,9 @@ Full Sail University
         
         <!--INPUT FIELD SECTION-->
         <div id="inputFieldDiv">
-            <form>
+            <form ng-submit="addItem()">
                 <input type="text" placeholder="Add a Grocery Item" ng-model="itemName" />
-                <input type="submit" name="addBtn" id="addBtn" value="Add Item" ng-click="addItem()" />
+                <input type="submit" name="addBtn" id="addBtn" value="Add Item" />
                 <div class="message">{{ msg }}</div>
             </form>
         </div>
@@ -75,7 +75,6 @@ Full Sail University
     <!-- JAVASCRIPT FILES -->
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/dataService.js"></script>
 
 </body>
 </html>
